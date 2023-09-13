@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Josefin-Sans';
+    src: url('../assets/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_slnt\,wght.ttf') format('truetype');
+}
+
+:root {
+    /* Colors */
+    --primary-color: #94A684;
+    --secondary-color: #f4ecdc;
+    --secondary-color-medium: #f9f6ee;
+    --secondary-color-light: #fcfaf6;
+    --black: #151515;
+        /* Fonts */
+    --titles-font: 'Josefin-Sans', sans-serif;
+    --content-font: 'Inter', Arial, Helvetica, sans-serif;
+
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: var(--content-font);
+    margin: 0 16px;
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+select {
+    appearance: none;
+    padding: 0.5em;
+    /* Agrega un poco de espacio alrededor del select */
+    border: 1px solid #ccc;
+    /* Agrega un borde para resaltar el select */
+    background-color: white;
+    /* Fondo blanco */
+    color: #333;
+    /* Color de texto predeterminado */
+    font-family: inherit;
+    /* Utiliza la fuente heredada */
+    font-size: inherit;
+    /* Utiliza el tamaño de fuente heredado */
+    line-height: inherit;
+    /* Utiliza la altura de línea heredada */
+}
+
+/* Estilos adicionales para el hover o enfoque (opcional) */
+select:hover,
+select:focus {
+    border-color: #007bff;
+    /* Cambia el color del borde al pasar el cursor o enfocar */
+    outline: none;
+    /* Elimina el contorno de enfoque predeterminado */
+}
+
+/* Logo */
+.logo-small {
+    width: 150px;
+    height: 80px;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 10% auto 10%;
+    background-color: var(--secondary-color-light);
+}
+
+#root {
+    grid-row: 2;
+    text-align: center;
+}
+
+
+
+/*---------------------index---------------*/
+.index {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+.index__weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.weather__data {
+    display: flex;
+    align-items: start;
+    color: var(--secondary-color);
+    font-size: 48px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
+}
+
+.weather__data span {
+    font-size: 32px;
+}
+
+.weather__select {
+    height: 100%;
+    width: 100%;
+    padding: 0 8px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--secondary-color-light);
+    box-shadow: 0px 3px 4px 0px rgba(9, 30, 66, 0.10);
+}
+
+.cutom-select {
+    width: 100%;
+    position: relative;
+    height: 24px;
+    color: var(--black);
+
+}
+
+.cutom-select span {
+    position: absolute;
+    top: 0;
+    right: 4px;
+    height: 100%;
+    width: 24px;
+    background-image: url('../assets/icons/cross-down.svg');
+    background-size: contain;
+}
+
+/*------------------------------------------*/
+
+.index__buttons {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, 155px);
+    grid-auto-rows: 92px;
+    gap: 16px;
+}
+
+.index__buttons button {
+    display: flex;
+    width: 155px;
+    padding: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 15px;
+    background: var(--secondary-color-light);
+    box-shadow: 0px 8px 26px 0px rgba(148, 166, 132, 0.50);
+    font-size: --;
+    color: var(--primary-color);
+    font-family: var(--titles-font);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 26px;
+    /* 144.444% */
+}
+
+.index__buttons span{
+    height: 100%;
+    width: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#Intranet-button span{
+    background-image: url('../assets/icons/globe.svg');
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 3;
+}
+
+.footer__social-media {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 32px;
+}
+
+footer li {
+    width: 24px;
+    height: 24px;
+}
+
+.facebook-icon {
+    background: url('../assets/icons/facebook.svg');
+}
+
+.instagram-icon {
+    background: url('../assets/icons/instagram.svg');
+}
+
+.twitter-icon {
+    background: url('../assets/icons/Twitter.svg');
+    background-repeat: no-repeat;
+}
+
+.youtube-icon {
+    background: url('../assets/icons/youtube.svg');
+}
