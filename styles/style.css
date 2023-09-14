@@ -31,26 +31,9 @@
     --content-small-semibold: 600 1.0rem var(--content-font);
         /*shadow*/
     --shadow-medium: 0px 3px 4px 0px rgba(9, 30, 66, 0.10);
+    --shadow-large: 0px 8px 12px 0px rgba(9, 30, 66, 0.10);
     --text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
-
-
-
-h1{
-    font: var(--title);
-    color: var(--primary-color);
-}
-
-h2{
-    font:var(--subtitle);
-    color:var(--gray);
-    padding-bottom: 16px;
-}
-
-.Primary-subtitle{
-
-}
-
 
 html {
     font-size: 62.5%;
@@ -65,6 +48,47 @@ html {
     padding: 0;
 
 }
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 10% auto 10%;
+    background-color: var(--secondary-color-light);
+}
+@media screen and (min-width: 992px) {
+    main{
+        margin: 0 10%;
+    }
+}
+main{
+    grid-row: 2;
+
+}
+
+h1{
+    font: var(--title);
+    color: var(--primary-color);
+}
+
+h2{
+    font:var(--subtitle);
+    color:var(--gray);
+    padding-bottom: 16px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.Primary-subtitle{
+
+}
+
+
+table{
+    border-spacing: 0 4px;
+}
+
 
 select {
     appearance: none;
@@ -93,6 +117,11 @@ select:focus {
     /* Elimina el contorno de enfoque predeterminado */
 }
 
+table{
+    width: 100%;
+}
+
+
 /* Logo */
 .logo-small {
     width: 150px;
@@ -120,27 +149,23 @@ select:focus {
 /* Buttons */
 
 /* ------------------ */
-body {
-    display: grid;
-    min-height: 100vh;
-    grid-template-rows: 10% auto 10%;
-    background-color: var(--secondary-color-light);
-}
 
 .background-green{
     background-color: var(--primary-color);
 }
 
-main{
-    grid-row: 2;
-
-}
 
 section{
     display: flex;
     height: 100%;
     flex-direction: column;
     align-items: center;
+    margin: 36px 0;
+    gap: 24px;
+}
+
+article{
+    width: 100%;
 }
 
 .icon{
@@ -181,6 +206,7 @@ header{
 /*---------------------index---------------*/
 .index {
     gap: 48px;
+    margin: 0;
 }
 
 .index__weather {
@@ -230,16 +256,15 @@ header{
     background-size: contain;
 }
 
-.index__buttons {
+.main-grid-cards {
     display: grid;
-    width: 100%;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 155px);
     grid-auto-rows: 92px;
     gap: 16px;
 }
 
-.index__buttons button {
+.index__buttons a {
     display: flex;
     gap: 5px;
     width: 155px;
@@ -281,6 +306,7 @@ header{
 .login{
     gap: 88px;
     text-align: center;
+    margin: 0;
 }
 
 .login__form{
@@ -310,11 +336,13 @@ header{
 }
 
 .submit-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 13px 0;
     width: 156px;
     height: 38px;
     border-radius: 5px;
-    border: none;
     box-shadow: var(--shadow-medium);
     font: var(--content-bold);
     color: var(--primary-color);
@@ -330,8 +358,6 @@ header{
 
 .intranet{
     align-items: start;
-    text-align: start;
-    margin: 36px 0;
     gap: 24px;
 }
 
@@ -366,7 +392,62 @@ header{
     background-image: url('../assets/icons/close.svg');
 }
 
+.main-table{
+    text-align: center;
+}
+
+.main-table__header th{
+    padding: 8px;
+}
+
+.main-table td{
+    background-color:var(--secondary-color-medium);
+    padding: 8px;
+    box-shadow: 0px 3px 4px 0px rgba(9, 30, 66, 0.10);
+}
+
+
+
 /*-----------------------------------------*/
+
+/* Habitaciones */
+
+.habitaciones{
+    align-items: start;
+    gap: 24px;
+}
+
+/* ------------ */
+
+/* Bebidas */
+.Bebidas{
+    align-items: start;
+}
+
+.bebidas__container{
+    justify-content: start;
+}
+.drink__card{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--secondary-color-light);
+    box-shadow: var(--shadow-large);
+    border-radius: 15px;
+}
+.drink__image{
+    width: 50%;
+    height: 100%;
+    right: 0;
+    float: right;
+    object-fit: cover;
+}
+.drink__card p{
+    padding: 4px;
+    width: 50%;
+    text-align: center;
+}
+/* ---------- */
 
 /* Footer */
 footer {

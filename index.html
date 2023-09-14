@@ -7,35 +7,14 @@
     <link rel="stylesheet" href="./styles/style.css">
     <title>Hotel Gaia</title>
 </head>
-<body id="root">
-    <main>
-        <section class="index">
-            <img class="logo-small" src="./assets/images/Logo-small.png" alt="Logo Hotel Gaia">
-            <article class="index__weather">
-                <p class="weather__data">24<span>°c</span></p>
-                <div class="cutom-select">
-                    <select class="weather__select" id="options">
-                        <option value="Mexico">Mexico</option>
-                        <option value="España">España</option>
-                        <option value="Francia">Francia</option>
-                    </select>
-                    <span></span>
-                </div>
-            </article>
-            <article class="index__buttons">
-                <button id="Intranet-button">Intranet<span class="global-icon"></span></button>
-                <button id="Rooms-button">Habitaciones<span class="book-icon"></span></button>
-                <button id="Drinks-button">Bebidas<span class="drink-icon"></span></button>
-        </section>
-    </main>
-    <footer>
-        <ul class="footer__social-media">
-            <li class="facebook-icon"></li>
-            <li class="instagram-icon"></li>
-            <li class="twitter-icon"></li>
-            <li class="youtube-icon"></li>
-        </ul>
-    </footer>
+
+<body>
+    <header class="header" id='Header'></header>
+    <main id="root"></main>
+    <footer class="footer" id="Footer"></footer>
+
+
+    <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
