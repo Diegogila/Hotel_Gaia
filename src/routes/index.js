@@ -20,9 +20,14 @@ const routes = {
 
 const router = async () => {
     document.body.classList.remove("background-green");
+
+
     const header = null || document.getElementById("Header");
     const content = null || document.getElementById("root");
     const footer = null || document.getElementById("Footer");
+
+    header.innerHTML = "";
+    footer.innerHTML = "";
 
     let hash = getHash();
     console.log(hash);

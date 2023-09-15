@@ -56,6 +56,9 @@ body {
     background-color: var(--secondary-color-light);
 }
 @media screen and (min-width: 992px) {
+    body{
+        font-size: var(--content);
+    }
     main{
         margin: 0 10%;
     }
@@ -216,7 +219,7 @@ header{
     gap: 18px;
 }
 
-.weather__data {
+.weather__temperature {
     display: flex;
     align-items: start;
     color: var(--secondary-color);
@@ -224,7 +227,14 @@ header{
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
 }
 
-.weather__data span {
+.weather__data {
+    color: ;
+    font-size: 18px;
+    text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
+}
+
+
+.weather__temperature span {
     font-size: 32px;
 }
 

@@ -1,7 +1,7 @@
-const API = 'https://rickandmortyapi.com/api/character/';
 
-const getData = async (id) => {
-    const apiURL = id ? `${API}${id}`: API;
+const getData = async (option) => {
+    
+    const API = 'http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json';
 
     try {
         const response = await fetch(apiURL);
