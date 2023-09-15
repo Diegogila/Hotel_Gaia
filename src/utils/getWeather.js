@@ -1,10 +1,12 @@
+import apikeyWeather from "../secrets/apikeys.js";
 
-const getData = async (option) => {
+const getWeather = async (city) => {
+
     
-    const API = 'http://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json';
+    const API = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apikeyWeather}`;
 
     try {
-        const response = await fetch(apiURL);
+        const response = await fetch(API);
         const data = response.json();
         return data;
     } catch (error) {
@@ -12,4 +14,4 @@ const getData = async (option) => {
     };
 };
 
-export default getData;
+export default getWeather;

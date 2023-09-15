@@ -12,6 +12,7 @@
     /* Colors */
     --primary-color: #94A684;
     --secondary-color: #f4ecdc;
+    --secondary-color-hard:#EEE3CB;
     --secondary-color-medium: #f9f6ee;
     --secondary-color-light: #fcfaf6;
     --black: #151515;
@@ -216,7 +217,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 8px;
 }
 
 .weather__temperature {
@@ -228,8 +229,8 @@ header{
 }
 
 .weather__data {
-    color: ;
-    font-size: 18px;
+    color: var(--secondary-color);
+    font:var(--subtitle-small);
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.50);
 }
 
