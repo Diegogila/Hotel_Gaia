@@ -1,16 +1,10 @@
-const Header = (option=true) => {
-    
-    const view = `
-    <span class="icon back-icon"></span>
-    <img class="logo-icon" src="./assets/images/Logo-Button.svg" alt="">
-    <div class="overlay-button">
-        <span class="icon menu-icon"></span>
-    </div>`;
+const Header = () => {
 
-    const viewBackOnly = `
-    <span class="icon back-icon--dark"></span>
-    `
-    return option? view : viewBackOnly;
+const view = `
+<my-navbar src-logo="../../assets/images/Logo-Button.svg" ></my-navbar>
+`;
+
+return view
 }
 
 export default Header;

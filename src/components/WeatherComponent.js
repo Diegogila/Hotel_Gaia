@@ -127,7 +127,7 @@ class WeatherSelector extends HTMLElement {
   async attributeChangedCallback(name, old, now){
     await this.renderWeather();
   }
-  // Conectar el web component al documento
+
   async connectedCallback() {
     await this.renderWeather();
   }

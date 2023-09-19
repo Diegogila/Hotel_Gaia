@@ -42,7 +42,6 @@ const router = async () => {
             break;
         case "login":
             document.body.classList.add("background-green");
-            header.innerHTML = await Header(false);
             content.innerHTML = await render();
             break;
         case "intranet":
