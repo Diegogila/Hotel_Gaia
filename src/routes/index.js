@@ -57,7 +57,6 @@ const router = async () => {
             header.innerHTML = await Header();
             content.innerHTML = await render();
             break;
-            break;
     }
 };
 

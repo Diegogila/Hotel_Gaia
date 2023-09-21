@@ -1,42 +1,47 @@
 const Rooms = () => {
     const view = `
-    <main>
     <section class="habitaciones">
       <h1 class="Primary-title">Habitaciones</h1>
-      <table class="main-table rooms__table">
-        <tr class="main-table__header">
-          <th>No.</th>
-          <th>Habitacion</th>
-          <th>Max. Ocup</th>
-          <th>Disponible</th>
-        </tr>
-        <tr>
-          <td>01</td>
-          <td>2 Queen</td>
-          <td>2</td>
-          <td>Ocupada</td>
-        </tr>
-        <tr>
-          <td>02</td>
-          <td>Standar</td>
-          <td>2</td>
-          <td>Libre</td>
-        </tr>
-        <tr>
-          <td>03</td>
-          <td>King suite</td>
-          <td>3</td>
-          <td>Libre</td>
-        </tr>
-        <tr>
-          <td>04</td>
-          <td>2 King suite</td>
-          <td>4</td>
-          <td>Libre</td>
-        </tr>
-      </table>
+      <div class="card-container">
+        <div class="card">
+            <img src="../../assets/images/2indiv.jpg" alt="Habitación 1">
+            <div class="card-info">
+                <h2>Habitación #1</h2>
+                <p><strong>Habitación con Camas:</strong> Dos individuales</p>
+                <p><strong>Número de Huéspedes Máximo:</strong> 2</p>
+                <p><strong>Balcón:</strong> Sí</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/queen.jpg" alt="Habitación 2">
+            <div class="card-info">
+                <h2>Habitación #2</h2>
+                <p><strong>Habitación con Camas:</strong> Una Queen Size</p>
+                <p><strong>Número de Huéspedes Máximo:</strong> 2</p>
+                <p><strong>Balcón:</strong> No</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/king.jpg" alt="Habitación 3">
+            <div class="card-info">
+                <h2>Habitación #3</h2>
+                <p><strong>Habitación con Camas:</strong> Una King Size</p>
+                <p><strong>Número de Huéspedes Máximo:</strong> 3</p>
+                <p><strong>Balcón:</strong> Sí</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="../../assets/images/2matri.jpg" alt="Habitación 4">
+            <div class="card-info">
+                <h2>Habitación #4</h2>
+                <p><strong>Habitación con Camas:</strong> Dos Matrimoniales</p>
+                <p><strong>Número de Huéspedes Máximo:</strong> 4</p>
+                <p><strong>Balcón:</strong> No</p>
+            </div>
+        </div>
+    </div>
     </section>
-  </main>`;
+`;
   return view;
 }
 
