@@ -1,6 +1,5 @@
 const Intranet = () => {
     const view = `
-    <main>
     <section class="intranet">
         <h1 class="Primary-title">Intranet</h1>
         <article class="comments">
@@ -59,7 +58,6 @@ const Intranet = () => {
             </div>
         </article>
     </section>
-</main>
     `;
     return view;
 }

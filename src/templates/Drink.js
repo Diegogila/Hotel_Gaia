@@ -1,22 +1,17 @@
 
-const Drink = async () => {
-const view = `
-    <div id="slide" class="hidden">
+
+const Drink = () => {
+    const view = `
         <span id="closeSlide" class="close">&times;</span>
         <div class="slide-content">
             <img src="image.jpg" alt="Imagen">
             <p>Texto descriptivo sobre la imagen y el contenido del slide.</p>
         </div>
-    </div>
 `
     return view;
 }
 
-
-
-
-
-
+export default Drink;
 
 
 

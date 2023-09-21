@@ -5,59 +5,70 @@ import Login from "../pages/Login.js";
 import Intranet from "../pages/Intranet.js";
 import Rooms from "../pages/Rooms.js";
 import Drinks from "../pages/Drinks.js";
+import Drink from "../templates/Drink.js"
 import Error404 from "../pages/Error404.js";
 import getHash from "../utils/getHash.js";
 import resolveRoutes from "../utils/resolveRoutes.js";
 
-
 const routes = {
-    "/": Home,
-    "login": Login,
-    "intranet": Intranet,
-    "habitaciones": Rooms,
-    "bebidas": Drinks,
-    contact: "Contact",
+  "/": Home,
+  login: Login,
+  intranet: Intranet,
+  habitaciones: Rooms,
+  bebidas: Drinks,
+  contact: "Contact",
 };
 
 const router = async () => {
-    document.body.classList.remove("background-green");
+  document.body.classList.remove("background-green");
 
+  const header = null || document.getElementById("Header");
+  const content = null || document.getElementById("root");
+  const footer = null || document.getElementById("Footer");
 
-    const header = null || document.getElementById("Header");
-    const content = null || document.getElementById("root");
-    const footer = null || document.getElementById("Footer");
+  header.innerHTML = "";
+  footer.innerHTML = "";
 
-    header.innerHTML = "";
-    footer.innerHTML = "";
+  let hash = getHash();
+  console.log(hash);
+  // let route = await resolveRoutes(hash);
+  let render = routes[hash] ? routes[hash] : Error404;
 
-    let hash = getHash();
-    console.log(hash);
-    // let route = await resolveRoutes(hash);
-    let render = routes[hash] ? routes[hash] : Error404;
+  switch (hash) {
+    case "/":
+      content.innerHTML = await render();
+      footer.innerHTML = await Footer();
+      break;
+    case "login":
+      document.body.classList.add("background-green");
+      content.innerHTML = await render();
+      break;
+    case "intranet":
+      header.innerHTML = await Header();
+      content.innerHTML = await render();
+      break;
+    case "habitaciones":
+      header.innerHTML = await Header();
+      content.innerHTML = await render();
+      break;
+    default:
+    case "bebidas":
+      header.innerHTML = await Header();
+      content.innerHTML = await render();
+      break;
+  }
 
-    switch (hash) {
-        case "/":
-            content.innerHTML = await render();
-            footer.innerHTML = await Footer();
-            break;
-        case "login":
-            document.body.classList.add("background-green");
-            content.innerHTML = await render();
-            break;
-        case "intranet":
-            header.innerHTML = await Header();
-            content.innerHTML = await render();
-            break;
-        case "habitaciones":
-            header.innerHTML = await Header();
-            content.innerHTML = await render();
-            break;
-        default:
-        case "bebidas":
-            header.innerHTML = await Header();
-            content.innerHTML = await render();
-            break;
-    }
-};
+  const drinkCard = document.querySelectorAll(".drink__card");
+  const closeSlideButton = document.getElementById('closeSlide');
+
+  drinkCard[0].addEventListener("click",() => {
+    const slide = document.querySelector(".slide");
+    slide.innerHTML = Drink();
+    slide.classList.toggle("reveal");
+  }); 
+  closeSlideButton.addEventListener('click', function() {
+    slide.classList.remove('reveal');
+    });
+}
 
 export default router;
