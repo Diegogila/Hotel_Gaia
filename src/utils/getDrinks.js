@@ -11,9 +11,6 @@ export const getDrinkById = async (coktailID) => {
     }
 };
 export const getDrinks = async (id=undefined) => {
-
-    
-    
     const coktails = [
         11007,
         11000,

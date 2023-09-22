@@ -12,7 +12,7 @@ const style = `
     gap: 8px;
 }
 
-.weather__temperature {
+.weather__temperature{
     display: flex;
     align-items: start;
     color: var(--primary-color);
