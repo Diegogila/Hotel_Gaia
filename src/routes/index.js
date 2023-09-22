@@ -59,16 +59,18 @@ const router = async () => {
   }
 
   const drinkCard = document.querySelectorAll(".drink__card");
-  const closeSlideButton = document.getElementById('closeSlide');
-
-  drinkCard[0].addEventListener("click",() => {
-    const slide = document.querySelector(".slide");
-    slide.innerHTML = Drink();
-    slide.classList.toggle("reveal");
-  }); 
-  closeSlideButton.addEventListener('click', function() {
-    slide.classList.remove('reveal');
+  drinkCard.forEach(node => {
+    node.addEventListener("click",async () => {
+        const slide = document.querySelector(".slide");
+        slide.innerHTML = await Drink(node.id);
+        slide.classList.toggle("reveal");
+        const closeSlideButton = document.getElementById('closeSlide');
+        closeSlideButton.addEventListener('click', function() {
+            slide.innerHTML = "";
+          slide.classList.remove('reveal');
+          });
     });
+  }) 
 }
 
 export default router;

@@ -1,11 +1,20 @@
+import { getDrinkById } from "../utils/getDrinks.js";
 
 
-const Drink = () => {
+const Drink = async (id) => {
+    const data = await getDrinkById(id);
+    console.log(data);
     const view = `
         <span id="closeSlide" class="close">&times;</span>
         <div class="slide-content">
-            <img src="image.jpg" alt="Imagen">
-            <p>Texto descriptivo sobre la imagen y el contenido del slide.</p>
+            <img src="${data.strDrinkThumb}" alt="Imagen">
+            <div class="slide-info">
+                <h3 class="slide-title ">${data.strDrink}</h3>
+                <div class="slide-p">
+                <h3 class="content-semibold">Instrucciones:</h3>
+                <p>${data.strInstructions}</p>
+                </div>
+            </div>
         </div>
 `
     return view;

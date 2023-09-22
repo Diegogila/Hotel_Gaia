@@ -131,6 +131,7 @@ class Hamburguer extends HTMLElement {
     this.logo = document.createElement('img');
     this.logo.className = "logo-icon";
     this.logo.src = this.getAttribute('src-logo');
+    this.logo.addEventListener('click', () => document.location.hash = '/');
 
     this.hamburguer = document.createElement('div');
     this.hamburguer.className = "hamburguer";

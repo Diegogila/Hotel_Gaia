@@ -10,8 +10,8 @@ const Drinks = async () => {
             <h2 class="Primary-subtitle">Preparados</h2>
             <div class="main-grid-cards bebidas__container">
                 ${dataList.map(drink => `
-                <div class="drink__card">
-                    <p>${drink.strDrink}</p>
+                <div class="drink__card" id="${drink.idDrink}">
+                    <p class="content-small-semibold">${drink.strDrink}</p>
                     <img  class="drink__image" src="${drink.strDrinkThumb}" alt="">
                 </div>`).join('')}
             </div>
