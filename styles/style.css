@@ -372,7 +372,8 @@ my-navbar{
 
 .comments__container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,156px);
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit,250px);
     grid-auto-rows: max-content(156px);
 }
 
@@ -410,7 +411,14 @@ my-navbar{
     padding: 8px;
     box-shadow: 0px 3px 4px 0px rgba(9, 30, 66, 0.10);
 }
-
+@media screen and (min-width: 992px){
+    p{
+        font: var(--content);
+    }
+    .main-table__header{
+        font: var(--subtitle);
+    }
+}
 
 
 /*-----------------------------------------*/
@@ -531,6 +539,10 @@ my-navbar{
         width: 50%;
         font:var(--content)
     }
+
+    .slide-content .slide-title{
+        font: var(--subtitle);
+    }
 }
 .slide-content {
     display: grid;
@@ -548,12 +560,12 @@ my-navbar{
 .slide-info{
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap:20px;
 }
 
-.slide-title{
+/* .slide-title{
     font: var(--content-bold);
-}
+} */
 
 .slide-p{
     display: flex;
